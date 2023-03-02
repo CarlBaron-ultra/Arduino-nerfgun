@@ -1,6 +1,6 @@
 # Arduino-nerfgun
-##Background
-##Materials
+## Background
+## Materials
 + Arduino Uno Rev 3 or compariable microcontroller
 + breadboard
 + jumper wires
