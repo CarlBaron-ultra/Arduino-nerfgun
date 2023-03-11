@@ -22,4 +22,4 @@ The Passive Infrared (PIR) module is powered from the Arduino's 5v pin and tied 
 
 
 [^1]: Under load there is the possibility that the servo could draw more current or approach the limit of current the Arduino is capable of supplying so an external power source is used
-[^2]: Our code makes use of interrupts and interrupts are tied to certain pins one of which is digital pin 2. if another pin is used changes to the code will be necessary.
+[^2]: Our code makes use of interrupts and interrupts are tied to certain pins one of which is digital pin 2. if another pin is used changes to the code will be necessary. [See here for more on this](https://www.arduino.cc/reference/en/language/functions/external-interrupts/attachinterrupt/)
