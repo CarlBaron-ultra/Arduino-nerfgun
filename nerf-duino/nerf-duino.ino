@@ -2,13 +2,14 @@
 https://myhowtosandprojects.blogspot.com/2014/02/sainsmart-2-channel-5v-relay-arduino.html
 https://www.arduino.cc/en/Tutorial/LibraryExamples/Sweep
 https://www.parallax.com/product/pir-sensor-with-led-signal/
+Arduino cookbook 2nd edition pg 606-609
 */
 #include <Servo.h>
 Servo myservo;
 int pos=180; //was originally set to 0
 int relayPin1 = 7;  //IN1 connected to digital pin 7
+const int PirPin=2;  //PIR sensor on pin2
 
-//volatile int PIRstate=0;
 
 void setup() {
   //gives time for the PIR module to warm up
@@ -18,7 +19,9 @@ void setup() {
   //Servo attached to digital pin 9  
   myservo.attach(9);
 
-  //attachInterrupt(2,pin_ISR,CHANGE);
+  pinMode(PirPin, INPUT);
+
+  attachInterrupt(0,PirPin,CHANGE);//0 is interrupt pin 0 which for the uno is digital pin2
 
   //prevents relay from starting up engaged
   digitalWrite(relayPin1, HIGH);  
