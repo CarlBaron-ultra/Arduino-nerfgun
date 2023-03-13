@@ -47,7 +47,7 @@ void loop() {
   //   }
 
     // delay(5000);
-  }
+  //}
   //delay(1000);  //wait for a second
 }
 
